@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ski length calculator</title>
+  <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="./style.css">
+ </head>
+<body>
+  <div id="app">
+    <h1>{{title}}</h1>
+
+    <h3>{{instruction}}</h3>
+      <div class = "in_and_calc">
+        <form>
+          <div class="input">
+            <input v-model="height" type="number" placeholder = "Your height" @keypress.enter.prevent ="calculateResults">
+          </div>
+          <div>
+            <button type="button" @click="calculateResults" class = "btn1">{{btn}}</button>	
+          </div>
+        </form>
+        <div class = "error">
+          <output type = "text" class = "error" name ="error" >{{errorMessageText}}</output>
+        </div>
+      </div>  
+    
+    
+    <div class="container-ski">
+      
+        <div class = "ski_output" v-for="value in skiLengths">
+          <output type = "number" >{{ value }}</output>
+        </div>  
+    </div>
+    <div class="container-weight">     
+        <div class = "weight_output" v-for="value in weights">  
+          <output type = "number" >{{ value }}</output>
+        </div>
+    </div>
+    <footer>
+      <p>&copy;Martti Nõmme</p>
+    </footer> 
+  </div>
+</div>
+<script src = "./app.js"></script>
+</body>
+</html>
