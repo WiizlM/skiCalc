@@ -19,6 +19,20 @@
           <div class="input">
             <input v-model="height" type="number" placeholder = "Your height" @keypress.enter.prevent ="calculateResults">
           </div>
+          <div class="radioButtons">
+            <div>
+              <input type="radio" name="results" value="10" v-model="amountOfResults">
+              <label for="10">10 results</label>
+            </div>
+            <div>
+              <input type="radio" name="results" value="15" v-model="amountOfResults">
+              <label for="15">15 results</label>
+            </div>
+            <div>
+              <input type="radio" name="results" value="20" v-model="amountOfResults">
+              <label for="20">20 results</label>
+            </div>
+          </div>
           <div>
             <button type="button" @click="calculateResults" class = "btn1">{{btn}}</button>	
           </div>

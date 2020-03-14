@@ -8,9 +8,10 @@ new Vue ({
         title: 'SKI CALC',
         instruction: 'Enter your FIS height in cm',
         btn: 'CALCULATE',
-        amountOfResults: 10,
+        amountOfResults: 0,
         minValue: 140,
-        maxValue: 200
+        maxValue: 200,
+        
 
     },
     methods: {
@@ -38,7 +39,7 @@ new Vue ({
             if (this.height <= this.maxValue && this.height >= this.minValue) {
                 h = 21;
                 for (i = 0; i < this.amountOfResults; i++) {
-                    weight = h * this.height * this.height / 10000;
+                    weight = h * this.height ** 2 / 10000;
                     kaalud.push(weight.toFixed(1));
                     h = h - 0.125;
                 }

@@ -41,6 +41,25 @@ h3 {
     color: #ecf0f196;
 }
 
+.radioButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.radioButtons div {
+    display: flex;
+    justify-content: start;
+    margin: 10px;
+}
+
+.radioButtons div label {
+    margin-left: 5px;
+}
+
+.radioButtons input {
+    margin-top: 2px;
+}
+
 .btn1 {
     display: block;
     width: 140px;
@@ -82,7 +101,7 @@ h3 {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     padding-left: 10px;
     color: rgba(0, 0, 0, 0.171);
