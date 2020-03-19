@@ -7,4 +7,4 @@ To make the process way faster and easier I made this little app.
 It uses the same formula as official document.
 
 Application takes an input value of athletes height and calculates results.
-Left numbers are ski lengths and right ones are weight neended for the specific ski length.
+Left numbers are ski lengths and right ones are weight needed for the specific ski length.
